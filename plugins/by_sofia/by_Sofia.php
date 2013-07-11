@@ -193,7 +193,6 @@ function dashboard_Redirect(){
 }
 
 //add classroom specific user roles:
-/*
 register_activation_hook (__FILE__, 'bySofia_createClassroom_user_roles');
 
 function bySofia_createClassroom_user_roles ()
@@ -254,14 +253,6 @@ function bySofia_createClassroom_user_roles ()
         
   ));
 
-  // probably don't need these printouts
-  if (null !== $result) {
-     echo 'Yay!  New Student role created!';
-  } else {
-      echo 'Oh... the Student role already exists.';
-  } 
-
-
   $result = add_role('teachingassistant', 'Teaching Assistant', array(
         'activate_plugins' => false,
         'add_users' => false, 
@@ -316,15 +307,6 @@ function bySofia_createClassroom_user_roles ()
         'update_themes' => false, 
         'upload_files' => true, 
   ));
-
-  // probably don't need these printouts
-  if (null !== $result) {
-    echo 'Yay!  New Teaching Assistant role created!';
-  } else {
-    echo 'Oh... the Teaching Assistant role already exists.';
-  } 
-
-
   $result = add_role('instructor', 'instructor', array(
         'activate_plugins' => false,
         'add_users' => true, 
@@ -380,15 +362,8 @@ function bySofia_createClassroom_user_roles ()
         'upload_files' => true, 
   
   ));
-  // probably don't need these printouts
-  if (null !== $result) {
-    echo 'Yay!  New Instructor role created!';
-  } else {
-    echo 'Oh... the Instructor role already exists.';
-  } 
 
 }
-*/
 
 
 ?>
