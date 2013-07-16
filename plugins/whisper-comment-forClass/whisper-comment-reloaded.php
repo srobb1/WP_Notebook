@@ -74,8 +74,8 @@ Author URI: https://github.com/srobb1/WP_Notebook
     // Default options
     if (empty($options)) {
       $options = array (
-      'whisper_on'		=> 0,
-      'whisper_to'		=> 1,
+      'whisper_on'		=> 1,
+      'whisper_to'		=> 2,
       'whisper_form_label'	=> __('Whisper to blog author(s)','whisper-comment-afm'),
       'whisper_denied_msg'	=> __('(...whisper...)','whisper-comment-afm'),
       'whisper_granted_msg'	=> __('(...whisper for you...)','whisper-comment-afm'),
