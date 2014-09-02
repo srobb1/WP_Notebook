@@ -1,19 +1,14 @@
-=== Whisper Comment Reloaded ===
-Contributors: parkerj
-Author: Joshua Parker Consulting
-Tags: comments, security, whisper, private, silent
-Requires at least: 2.8
-Tested up to: 3.2.1
+=== Whisper Comment For Class ===
+Author: Sofia Robb
+Orginal_Author: Joshua Parker Consulting
+Tags: comments, security, whisper, private, silent, classroom
+Requires at least: 3.9.2
+Tested up to:
 Stable tag: 1.0
-
-Whisper Comment Reloaded is a WordPress plugin for commenters to control comment visibility for other viewers.
 
 == Description ==
 
-Whisper Comment Reloaded is a WordPress plugin for commenters to control comment visibility for other viewers. A 'whisper' is a comment that is only displayed for targeted viewers. Viewers who are not authorised to view the whisper, will only see the replacement text instead.
-
-This is a great plugin to use for a class blog where a classroom blog can have multiple authors where the teacher/professor may want to add private notes for the student instead of making a public comment.
-
+Whisper Comment For Class is a WordPress plugin for commenters to control comment visibility by other students. Instructors (wp_role=instructor,teachingassistant) can leave comments for students (wp_role=student) that are only visible by that student. Students can reply to the Instructor privately. Works with WP-Multisite
 == Installation ==
 
 1. Download the zip file and extract its content to the `/wp-content/plugins/` directory

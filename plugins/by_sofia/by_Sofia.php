@@ -6,7 +6,7 @@
 /*
 Plugin Name: Plugin by Sofia: Classroom Friendly
 Plugin URI: 
-Description: Plugins to create student/teacher functionality such as: 1)Teacher/Student Privacy of post and comment visibility 2) Adds Student, Teaching Assistant and Instrutor Roles 3)removes quick edit from student roles 4)loads Comments as homepage for Dashview
+Description: Plugins to create student/teacher functionality such as: 1)Teacher/Student Privacy of post and comment visibility 2) Adds Roles: Student, Teaching Assistant and Instrutor 3) removes quick edit from student roles 4)loads Comments as homepage for Dashview
 
 Author: Sofia Robb
 Version: 1.0
@@ -140,6 +140,14 @@ function bySofia_checkWhisperInstall(){
   }else {
    return 0;
  }
+}
+
+// allow comments on drafts and pending post in the backend edit post screen
+add_action('dbx_post_advanced', bySofia_comment_on_edit_post);
+function bySofia_comment_on_edit_post(){
+//sofia added draft and pending test
+if ( 'draft' == get_post_status( $post )  ||'pending' == get_post_status( $post )  && post_type_supports($post_type, 'comments') )
+        add_meta_box('commentsdiv', __('Comments'), 'post_comment_meta_box', null, 'normal', 'core');
 }
 
 // allows comments on pending posts, to be used with whisper comment installed.
